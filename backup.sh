@@ -13,4 +13,4 @@ pg_dump $POSTGRESQL_HOST_OPTS $POSTGRESQLDUMP_OPTIONS $database \
           -T - \
           --silent \
           --output /dev/null \
-          https://content.dropboxapi.com/1/files_put/auto/$DROPBOX_PREFIXdatabase_$DATABASE_NAME.sql.gz
+          https://content.dropboxapi.com/1/files_put/auto/database_$DATABASE_NAME.sql.gz
