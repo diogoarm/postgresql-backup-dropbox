@@ -14,4 +14,4 @@ pg_dump $POSTGRESQL_HOST_OPTS $POSTGRESQLDUMP_OPTIONS $DATABASE_NAME > $DATABASE
           --silent \
           --output /dev/null \
           https://content.dropboxapi.com/1/files_put/auto/$DATABASE_NAME.sql.gz
-rm -f $DATABASE_NAME.sql $DATABASE_NAME.sql.gz
+  | rm -f $DATABASE_NAME.sql $DATABASE_NAME.sql.gz
