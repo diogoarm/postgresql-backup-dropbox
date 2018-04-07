@@ -16,6 +16,7 @@ $ docker run \
   -e POSTGRESQL_HOST=localhost \
   -e DROPBOX_ACCESS_TOKEN=YOUR_TOKEN \
   -e SCHEDULE=@daily \
+  -e DATABASE_NAME=databasename
   diogoarm/postgresql-backup-dropbox
 ```
 
@@ -29,6 +30,7 @@ $ docker run \
 - `DROPBOX_PREFIX` path prefix in your Dropbox (default: empty)
 - `DROPBOX_ACCESS_TOKEN` your Dropbox API access token *required*
 - `SCHEDULE` backup schedule time, see explainatons below
+- `DATABASE_NAME` the postgresql databasename *required*
 
 ### Automatic Periodic Backups
 
