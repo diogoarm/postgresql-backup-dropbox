@@ -1,5 +1,4 @@
 FROM alpine:edge
-LABEL maintainer="diogo.arm@gmail.com"
 
 RUN apk update; \
 	apk add postgresql-client; \
