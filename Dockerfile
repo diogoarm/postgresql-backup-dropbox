@@ -1,8 +1,13 @@
 FROM alpine:edge
 LABEL maintainer="diogo.arm@gmail.com"
 
-ADD install.sh install.sh
-RUN sh install.sh && rm install.sh
+RUN apk update; \
+	apk add postgresql-client; \
+	apk add curl; \
+	curl -L --insecure https://github.com/odise/go-cron/releases/download/v0.0.6/go-cron-linux.gz | zcat > /usr/local/bin/go-cron; \
+	chmod u+x /usr/local/bin/go-cron; \
+	rm -rf /var/cache/apk/*; \
+	apk add --update bash && rm -rf /var/cache/apk/*
 
 ENV POSTGRESQLDUMP_OPTIONS ""
 ENV POSTGRESQL_HOST ""

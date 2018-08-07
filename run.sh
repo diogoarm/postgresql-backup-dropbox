@@ -1,5 +1,4 @@
-#! /bin/sh
-
+﻿#!/bin/sh
 set -e
 
 if [ "${SCHEDULE}" = "" ]; then
